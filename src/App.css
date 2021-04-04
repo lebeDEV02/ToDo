@@ -50,7 +50,7 @@ header {
 	align-items: center;
 }
 
-.todo__item+.todo__item {
+.todo__item {
 	margin-top: 10px;
 }
 
@@ -58,18 +58,49 @@ p {
 	margin: 0;
 }
 
+ul {
+	padding: 0;
+	margin: 0;
+}
+
 .todo__item-text {
 	width: 80%;
+	padding-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .todo__item-done {
 	width: 10%;
-	background-color: lawngreen;
 	height: 50px;
+	border: none;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: green;
+	outline: none;
+	cursor: pointer;
 }
 
 .todo__item-delete {
 	width: 10%;
-	background-color: red;
 	height: 50px;
+	border: none;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	outline: none;
+	cursor: pointer;
+}
+
+.todo__item-text {
+	font-size: calc(10px + 2vmin);
+}
+
+.todo__item-text--completed {
+	text-decoration: line-through;
+	opacity: 0.3;
 }
